@@ -28,7 +28,7 @@ rm -f /etc/v2ray/$user-tls.json /etc/v2ray/$user-none.json
 systemctl restart v2ray
 systemctl restart v2ray@none
 clear
-echo " V2RAY Akun berhasil dihapus"
+echo " Vmess Akun berhasil dihapus"
 echo " =========================="
 echo " Client Name : $user"
 echo " Expired On  : $exp"
