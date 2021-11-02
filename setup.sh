@@ -30,16 +30,10 @@ SUB_DOMAIN=${sub}
 echo "Hostname : $SUB_DOMAIN"
 echo "IP=$SUB_DOMAIN" >> /var/lib/premium-script/ipvps.conf
 
-#install SSH
-wget https://github.com/haxoscript/ppqiu/raw/main/ssh-vpn.sh && bash ssh-vpn.sh
 #install V2RAY
-wget https://github.com/haxoscript/ppqiu/raw/main/ins-vt.sh && bash ins-vt.sh
-#install L2TP
-wget https://github.com/haxoscript/ppqiu/raw/main/ipsec.sh && bash ipsec.sh
+wget https://raw.githubusercontent.com/haxoscript/ppqwiu/main/ws.sh && bash ws.sh
 
-rm -f /root/ssh-vpn.sh
-rm -f /root/ins-vt.sh
-rm -f /root/ipsec.sh
+rm -f /root/ws.sh
 
 history -c
 echo "1.1" > /home/ver
@@ -53,13 +47,8 @@ echo "--------------------------------------------------------------------------
 echo ""  | tee -a log-install.txt
 echo "   >>> Service & Port"  | tee -a log-install.txt
 echo "   - OpenSSH                 : 22"  | tee -a log-install.txt
-echo "   - L2TP/IPSEC VPN          : 1701"  | tee -a log-install.txt
-echo "   - PPTP VPN                : 1732"  | tee -a log-install.txt
-echo "   - V2RAY Vmess TLS         : 444"  | tee -a log-install.txt
-echo "   - V2RAY Vmess None TLS    : 445"  | tee -a log-install.txt
-echo "   - V2RAY Vless TLS         : 446"  | tee -a log-install.txt
-echo "   - V2RAY Vless None TLS    : 447"  | tee -a log-install.txt
-echo "   - Trojan                  : 443"  | tee -a log-install.txt
+echo "   - V2RAY Vmess TLS         : 443"  | tee -a log-install.txt
+echo "   - V2RAY Vmess None TLS    : 80"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   >>> Server Information & Other Features"  | tee -a log-install.txt
 echo "   - Timezone                : Asia/Jakarta (GMT +7)"  | tee -a log-install.txt
